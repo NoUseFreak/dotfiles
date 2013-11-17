@@ -11,8 +11,12 @@ export HISTIGNORE='&:ls:cd ~:cd ..:[bf]g:exit:h:history'
 export HISTCONTROL=erasedups
 export PROMPT_COMMAND='history -a'
 
-
 export CLICOLOR=1
+
+##
+# Alias
+##
+alias ls="ls -la"
 
 ##
 # Git stuff

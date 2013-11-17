@@ -12,6 +12,7 @@
         lg = log --graph --pretty=oneline --abbrev-commit --decorate
         lga = log --graph --pretty=oneline --abbrev-commit --decorate --all
         st = status -sbu
+
 [push]
 	default = simple
 
