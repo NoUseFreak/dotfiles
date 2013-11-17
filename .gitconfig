@@ -3,8 +3,15 @@
 	email = dries@nousefreak.be
 
 [color]
-   ui = true
+	ui = true
 
 [alias]
-   lg = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        lola = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        crlf = input
+        lg = log --graph --pretty=oneline --abbrev-commit --decorate
+        lga = log --graph --pretty=oneline --abbrev-commit --decorate --all
+        st = status -sbu
+[push]
+	default = simple
 
