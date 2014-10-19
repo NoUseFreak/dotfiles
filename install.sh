@@ -1,6 +1,11 @@
 #!/bin/bash
 
+# Link bashprofile
 ln -s .bash_profile ~/.bash_profile
+
+# One time git configuration
+
+git config --global core.excludesfile ~/.dotfiles/src/git/gitignore_global
 
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 git config --global alias.lga "log --graph --pretty=oneline --abbrev-commit --decorate --all"
