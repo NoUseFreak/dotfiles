@@ -2,6 +2,7 @@
 
 # Link bashprofile
 ln -s .bash_profile ~/.bash_profile
+ln -s .vimrc ~/.vimrc
 
 # One time git configuration
 
