@@ -7,6 +7,6 @@ NoUseFreak's dotfiles
 
 ```
 $ git clone git@github.com:NoUseFreak/dotfiles.git ~/.dotfiles
-$ cd dotfiles
+$ cd ~/.dotfiles
 $ ./install.sh
 ```
