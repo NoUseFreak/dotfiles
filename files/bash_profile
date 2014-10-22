@@ -4,12 +4,12 @@ export CLICOLOR=1
 ##
 # Includes
 ##
-source $(pwd)/.dotfiles/src/path.sh
-source $(pwd)/.dotfiles/src/misc.sh
-source $(pwd)/.dotfiles/src/alias.sh
-source $(pwd)/.dotfiles/src/git.sh
-source $(pwd)/.dotfiles/src/bash.sh
-source $(pwd)/.dotfiles/src/history.sh
+source ~/.dotfiles/src/path.sh
+source ~/.dotfiles/src/misc.sh
+source ~/.dotfiles/src/alias.sh
+source ~/.dotfiles/src/git.sh
+source ~/.dotfiles/src/bash.sh
+source ~/.dotfiles/src/history.sh
 
 
 # Git branch details
