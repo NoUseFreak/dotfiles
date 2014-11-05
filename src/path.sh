@@ -1,2 +1,2 @@
 
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/.composer/vendor/bin:/usr/local/bin:$PATH
