@@ -4,9 +4,9 @@ SshInstall () {
 	curl -s -L https://raw.githubusercontent.com/beautifulcode/ssh-copy-id-for-OSX/master/install.sh | sh
 }
 
-echo ""
-echo "ssh-copy-id"
-if hash brew 2>/dev/null; then
+if ! hash ssh-copy-id 2>/dev/null; then
+	echo ""
+	echo "ssh-copy-id"
 	while true; do
 	    read -p "  Install? " yn
 	    case $yn in

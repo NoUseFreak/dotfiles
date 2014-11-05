@@ -4,9 +4,9 @@ HubInstall () {
 	brew install --HEAD hub
 }
 
-echo ""
-echo "Hub"
-if hash brew 2>/dev/null; then
+if ! hash hub 2>/dev/null; then
+	echo ""
+	echo "Hub"
 	while true; do
 	    read -p "  Install? " yn
 	    case $yn in
