@@ -3,9 +3,9 @@ dotfiles
 
 NoUseFreak's dotfiles
 
-# Included
+# What is included
 
-Runtime
+## Runtime
  - handy aliasses
  - bash coloring
  - git
@@ -13,7 +13,7 @@ Runtime
   - autocompletion
  - history improvements
 
-Installation
+## Software
  - brew
  - composer
  - hub
