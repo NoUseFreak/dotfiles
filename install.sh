@@ -27,8 +27,10 @@ done
 # Installation
 ##
 source ~/.dotfiles/src/install/nodejs.sh
+source ~/.dotfiles/src/install/composer.sh
 source ~/.dotfiles/src/install/brew.sh
 source ~/.dotfiles/src/install/git.sh
 source ~/.dotfiles/src/install/ssh.sh
+source ~/.dotfiles/src/install/mailcatcher.sh
 
 exit 0
