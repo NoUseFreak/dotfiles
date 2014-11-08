@@ -2,5 +2,5 @@
 ##
 # Git stuff
 ##
-. $(pwd)/.dotfiles/src/git/git-completion.bash
+. ~/.dotfiles/src/git/git-completion.bash
 
