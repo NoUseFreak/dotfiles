@@ -1,6 +1,6 @@
 
 MailcatcherInstall () {
-	gem install mailcatcher
+	sudo gem install mailcatcher
 }
 
 if ! hash mailcatcher 2>/dev/null; then
