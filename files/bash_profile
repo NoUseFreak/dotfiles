@@ -10,7 +10,10 @@ source ~/.dotfiles/src/alias.sh
 source ~/.dotfiles/src/git.sh
 source ~/.dotfiles/src/bash.sh
 source ~/.dotfiles/src/history.sh
+source ~/.dotfiles/src/ssh.sh
 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Git branch details
 function parse_git_dirty() {
@@ -25,3 +28,5 @@ symbol="$ "
 export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n$symbol\[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
 
+export PATH="/Users/driesdepeuter/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
