@@ -5,3 +5,11 @@ set ruler
 set showmode
 set title
 set laststatus=2
+
+" Search Highlighting
+nnoremap / :set hlsearch<CR>/
+nnoremap ? :set hlsearch<CR>?
+nnoremap n :set hlsearch<CR>n
+nnoremap N :set hlsearch<CR>N
+nnoremap <CR> :noh<CR><CR>
+nnoremap <leader>/ :set hlsearch!<CR>
