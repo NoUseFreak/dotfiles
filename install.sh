@@ -33,4 +33,9 @@ source ~/.dotfiles/src/install/git.sh
 source ~/.dotfiles/src/install/ssh.sh
 source ~/.dotfiles/src/install/mailcatcher.sh
 
+##
+# Config files
+##
+touch ~/.dotfiles/config/ssh_config
+
 exit 0
