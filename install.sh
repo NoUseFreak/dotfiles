@@ -32,6 +32,7 @@ source ~/.dotfiles/src/install/brew.sh
 source ~/.dotfiles/src/install/git.sh
 source ~/.dotfiles/src/install/ssh.sh
 source ~/.dotfiles/src/install/mailcatcher.sh
+source ~/.dotfiles/src/install/phpenv.sh
 
 ##
 # Config files

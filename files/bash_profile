@@ -11,6 +11,7 @@ source ~/.dotfiles/src/git.sh
 source ~/.dotfiles/src/bash.sh
 source ~/.dotfiles/src/history.sh
 source ~/.dotfiles/src/ssh.sh
+source ~/.dotfiles/src/phpenv.sh
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
