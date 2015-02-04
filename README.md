@@ -12,6 +12,7 @@ NoUseFreak's dotfiles
   - global ignore
   - autocompletion
  - history improvements
+ - ssh autocomplete
 
 ## Software
  - brew
