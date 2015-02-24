@@ -24,3 +24,5 @@ alias .....="cd ../../../.."
 ##
 
 alias P="cd ~/Projects"
+alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\""
+alias xd="xdebug"
