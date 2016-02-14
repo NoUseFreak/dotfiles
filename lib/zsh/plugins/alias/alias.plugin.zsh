@@ -17,4 +17,4 @@ alias P="cd ~/Projects"
 alias s="st"
 
 # Xdebug
-alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\""
+alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" php -d xdebug.remote_enable=true "
