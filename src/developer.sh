@@ -9,5 +9,6 @@ brew cask install filezilla
 
 brew install node
 brew install ssh-copy-id
+brew install html2text
 
 brew cask install dockertoolbox
