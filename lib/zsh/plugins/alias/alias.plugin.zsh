@@ -10,11 +10,8 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
-# Projects
-alias P="cd ~/Projects"
-
 # Shorter-cuts
-alias s="st"
+alias st="git st"
 
 # Xdebug
 alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" php -d xdebug.remote_enable=true "

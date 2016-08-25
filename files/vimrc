@@ -5,6 +5,9 @@ set ruler
 set showmode
 set title
 set laststatus=2
+set nocompatible
+set backspace=2
+
 
 " Search Highlighting
 nnoremap / :set hlsearch<CR>/
@@ -47,3 +50,99 @@ map! <Esc>OR *
 map! <kPlus> +
 map! <Esc>OS -
 map! <Esc>OM <CR>
+
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+
+" Command bar/info strip
+" https://github.com/bling/vim-airline
+Plugin 'bling/vim-airline'
+
+
+" List buffers in command bar
+" https://github.com/bling/vim-bufferline
+Plugin 'bling/vim-bufferline'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+
+" File tree explorer
+" https://github.com/scrooloose/nerdtree
+Plugin 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+
+" Toggle nerdtree via CTRL n
+map <C-n> :NERDTreeTabsToggle<CR>
+map <C-l> :tabn<CR>
+map <C-h> :tabp<CR>
+let g:nerdtree_tabs_synchronize_view = 1
+
+" Love comments C+space
+Plugin 'scrooloose/nerdcommenter'
+
+" tmux statusline
+" https://github.com/edkolev/tmuxline.vim
+Plugin 'edkolev/tmuxline.vim'
+
+" jsx extenstions
+" https://github.com/mxw/vim-jsx
+Plugin 'mxw/vim-jsx'
+
+" Comment out code via gcc
+" https://github.com/tpope/vim-commentary
+" Plugin 'tpope/commentary.vim'
+
+" Unity
+" -------------------------
+
+" Better movement between files?
+" https://github.com/Shougo/unite.vim
+Plugin 'Shougo/unite.vim'
+
+" vimproc required to grep via unite
+" WARNING: needs to be compiled via `make`
+" https://github.com/Shougo/vimproc.vim
+Plugin 'Shougo/vimproc.vim'
+
+" Allow unity to search to Recent Used files
+" https://github.com/Shougo/neomru.vim
+Plugin 'Shougo/neomru.vim'
+
+
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'airblade/vim-gitgutter'
+
+Plugin 'tomasr/molokai'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+set number
+syntax enable
+let g:solarized_termcolors = 256
+colorscheme molokai
+" let g:molokai_original = 1
+let g:rehash256 = 1
+set background=dark
+
+
+" Tab and spacing settings
+" set tabstop=4 shiftwidth=4 expandtab
+
+" Smartcase by default (only case sensitive when Caps are inclused)
+" for Case sensitive search by /helloworld\C
+" note: /helloworld/c would be force case insensitve in default)
+set ignorecase smartcase
+
+set autoindent
+
+" Ctrl+c to clipboard
+vmap <C-c> :w !pbcopy<CR><CR> 
+
