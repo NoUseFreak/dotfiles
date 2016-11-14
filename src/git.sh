@@ -2,6 +2,7 @@
 
 brew install git
 brew install hub
+brew install git-flow
 
 git config --global credential.helper osxkeychain
 git config --global core.excludesfile ~/.gitignore

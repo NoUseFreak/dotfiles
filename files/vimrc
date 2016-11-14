@@ -7,6 +7,10 @@ set title
 set laststatus=2
 set nocompatible
 set backspace=2
+set autoread
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<
+set list
+set colorcolumn=120
 
 
 " Search Highlighting
@@ -16,6 +20,9 @@ nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
 nnoremap <CR> :noh<CR><CR>
 nnoremap <leader>/ :set hlsearch!<CR>
+imap jj <ESC>
+
+
 
 " make external keypad work in terminal vim OSX!
 map <Esc>Oq 1
@@ -51,8 +58,10 @@ map! <kPlus> +
 map! <Esc>OS -
 map! <Esc>OM <CR>
 
+" Tab to cycle window focus
+map <Tab> <C-W>W
 
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+"set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -69,7 +78,7 @@ Plugin 'bling/vim-airline'
 " https://github.com/bling/vim-bufferline
 Plugin 'bling/vim-bufferline'
 
-Plugin 'ctrlpvim/ctrlp.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
 
 
 " File tree explorer
@@ -82,28 +91,24 @@ map <C-n> :NERDTreeTabsToggle<CR>
 map <C-l> :tabn<CR>
 map <C-h> :tabp<CR>
 let g:nerdtree_tabs_synchronize_view = 1
+let NERDTreeIgnore = ['\.pyc$']
 
-" Love comments C+space
-Plugin 'scrooloose/nerdcommenter'
+Plugin 'tomtom/tcomment_vim'
 
 " tmux statusline
 " https://github.com/edkolev/tmuxline.vim
 Plugin 'edkolev/tmuxline.vim'
 
-" jsx extenstions
-" https://github.com/mxw/vim-jsx
-Plugin 'mxw/vim-jsx'
-
-" Comment out code via gcc
-" https://github.com/tpope/vim-commentary
-" Plugin 'tpope/commentary.vim'
-
 " Unity
 " -------------------------
+
 
 " Better movement between files?
 " https://github.com/Shougo/unite.vim
 Plugin 'Shougo/unite.vim'
+
+nnoremap <C-p> :Unite file_rec/async<cr>
+
 
 " vimproc required to grep via unite
 " WARNING: needs to be compiled via `make`
@@ -114,11 +119,20 @@ Plugin 'Shougo/vimproc.vim'
 " https://github.com/Shougo/neomru.vim
 Plugin 'Shougo/neomru.vim'
 
-
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'airblade/vim-gitgutter'
-
 Plugin 'tomasr/molokai'
+
+Plugin 'davidhalter/jedi-vim'
+Plugin 'Yggdroot/indentLine'
+Plugin 'editorconfig/editorconfig-vim'
+
+Bundle 'chase/vim-ansible-yaml'
+Plugin 'hashivim/vim-terraform'
+
+" away?
+"Plugin 'valloric/youcompleteme'
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -145,4 +159,12 @@ set autoindent
 
 " Ctrl+c to clipboard
 vmap <C-c> :w !pbcopy<CR><CR> 
+
+" See unsaved changes
+map sd :w !diff % -<cr>
+
+
+let g:vim_json_syntax_conceal = 0 
+nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <F6> :registers<CR>
 
