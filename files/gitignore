@@ -51,3 +51,16 @@ Session.vim
 
 # Vagrant
 .vagrant
+
+# Archives
+*.tar
+*.tar.*
+*.zip
+*.tgz
+
+# Packages
+*.deb
+*.rpm
+*.exe
+*.jar
+*.msi
