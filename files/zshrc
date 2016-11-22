@@ -12,7 +12,7 @@ export PATH="$HOME/.phpenv/shims:$HOME/.phpenv/bin:$HOME/.composer/vendor/bin:/u
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
+ #You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
@@ -26,6 +26,7 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass.txt
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 # untar
 alias untar='tar xvf'
@@ -66,8 +67,11 @@ setopt nomenucomplete
 bindkey '^[[H' beginning-of-line
 bindkey '^[[F' end-of-line
 
-
+alias qa_ssh="cd ~/Projects/SparkcentralV2/ansible; AWS_PROFILE=qa bin/ssh_connect"
+alias exp_ssh="cd ~/Projects/SparkcentralV2/ansible; AWS_PROFILE=experiment bin/ssh_connect"
+alias prod_ssh="cd ~/Projects/SparkcentralV2/ansible; AWS_PROFILE=prod bin/ssh_connect"
 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH="/usr/local/sbin:$PATH"
