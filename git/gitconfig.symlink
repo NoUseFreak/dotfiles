@@ -1,0 +1,51 @@
+[user]
+	name = Dries De Peuter
+	email = dries@nousefreak.be
+
+[core]
+	excludesfile = ~/.gitignore_global
+	pager = less -FXRS -x2
+	editor = vim
+	whitespace = cr-at-eol
+	autocrlf = input
+
+[help]
+	autocorrect = 1
+
+[color]
+	ui = true
+
+[color "diff"]
+	meta = blue black bold
+
+[push]
+	default = simple
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lga = log --graph --pretty=oneline --abbrev-commit --decorate --all
+	st = status -sbu
+	co = checkout
+	cob = checkout -b
+	ci = commit
+	br = branch -v
+	diff = diff --ignore-space-at-eol -b -w --ignore-blank-lines
+	
+	# show what I did today
+    day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
+
+
+	# order files by number of commits, ascending
+	# Written by Corey Haines
+	# Scriptified by Gary Bernhardt
+	# Show churn for a time range:
+	#   $ git churn --since='1 month ago'
+	churn = "!f() { git log --all -M -C --name-only --format='format:' \"$@\" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print \"count\tfile\"} {print $1 \"\t\" $2}' | sort -g; }; f"
+
+	# rebase the current branch with changes from upstream remote
+	update = !git fetch upstream && git rebase upstream/`git rev-parse --abbrev-ref HEAD`
+
+	# tag aliases
+	# show the last tag
+	lt = describe --tags --abbrev=0
+
