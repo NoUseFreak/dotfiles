@@ -187,7 +187,7 @@ nnoremap <C-y> 3<C-y>
 nnoremap <leader>/ "fyiw :/<c-r>f<cr>
 
 nmap <leader>b :buffers<CR>:buffer<Space>
-nmap <leader>r :registers
+nmap <leader>r :registers<CR>
 
 " Clipboard handling
 "vmap <C-c> :w !pbcopy<CR><CR>

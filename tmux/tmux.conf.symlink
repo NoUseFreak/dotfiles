@@ -88,3 +88,8 @@ bind -t vi-copy 'y' copy-selection
 
 # Enable vim copy paste to system clipboard (Ubuntu)
 bind -t vi-copy y copy-pipe "xclip -sel clip -i"
+
+# Plugins
+
+set -g @plugin 'tmux-plugins/tmux-resurrect'  # Save and restore sessions using prefix-ctrl-s prefix ctrl-r
+
