@@ -14,14 +14,12 @@ setopt nomenucomplete
 # Plugins
 plugins=()
 
-plugins+=(git wd)
+plugins+=(gitfast wd)
 plugins+=(osx)
 plugins+=(gulp bower npm)
 plugins+=(docker docker-compose)
 plugins+=(systemadmin)
 plugins+=(symfony2 composer)
-
-
 
 # source all .zsh files inside of the zsh/ directory
 for config ($DOTFILES/zsh/*.zsh) source $config
@@ -59,3 +57,6 @@ if [[ -a ~/.localrc ]]; then
 	source ~/.localrc
 fi
 
+wd() {
+  . /home/dries/bin/wd/wd.sh
+}
