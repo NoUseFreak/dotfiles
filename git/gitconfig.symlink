@@ -49,3 +49,5 @@
 	# show the last tag
 	lt = describe --tags --abbrev=0
 
+[credential]
+	helper = cache
