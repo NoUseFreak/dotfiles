@@ -89,7 +89,12 @@ bind -t vi-copy 'y' copy-selection
 # Enable vim copy paste to system clipboard (Ubuntu)
 bind -t vi-copy y copy-pipe "xclip -sel clip -i"
 
+# http://superuser.com/questions/306028/tmux-and-zsh-custom-prompt-bug-with-window-name
+set-option -g allow-rename off
+
 # Plugins
 
 set -g @plugin 'tmux-plugins/tmux-resurrect'  # Save and restore sessions using prefix-ctrl-s prefix ctrl-r
+
+bind s source-file ~/.dotfiles/tmux/layout1.conf
 
