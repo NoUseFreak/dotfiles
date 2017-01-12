@@ -22,6 +22,7 @@ Plugin 'sickill/vim-pasta'             " Context aware pasting
 Plugin 'jiangmiao/auto-pairs'          " Auto create braces
 Plugin 'AndrewRadev/splitjoin.vim'     " Split object into multilines. gS, gJ
 Plugin 'kien/ctrlp.vim'                " Fuzy search using ctrl+p
+Plugin 'vim-scripts/mru.vim'           " Most recent files
 
 " Language specific
 Plugin 'hashivim/vim-terraform'        " Terraform highlighting

@@ -193,6 +193,8 @@ nmap <leader>r :registers<CR>
 "vmap <C-c> :w !pbcopy<CR><CR>
 set clipboard=unnamedplus
 
+" Use :W to write as root
+command W w !sudo tee % > /dev/null
 
 
 " }}}
@@ -219,4 +221,6 @@ nmap <leader>ge :Gedit<cr>
 nmap <silent><leader>gr :Gread<cr>
 nmap <silent><leader>gb :Gblame<cr>
 
+" MRU plugin
+nmap <leader>; :MRU<CR>
 " }}}
