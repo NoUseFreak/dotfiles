@@ -202,6 +202,12 @@ map <leader>ss :setlocal spell!<CR>
 " Toggle paste
 map <leader>pp :setlocal paste!<CR>
 
+" Add extra common tab controls
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove 
+
 " }}}
 
 
