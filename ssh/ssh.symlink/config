@@ -1,0 +1,9 @@
+
+AddKeysToAgent yes
+
+Host *
+	ForwardAgent yes
+	ControlMaster auto
+	ControlPersist 600
+
+

@@ -1,1 +1,3 @@
 vim/vim.symlink/bundle
+ssh/ssh.symlink/id_*
+ssh/ssh.symlink/known_hosts
