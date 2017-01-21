@@ -25,9 +25,6 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " =================================
 " Section User Interface {{{
 
-" set colorscheme
-colorscheme nousefreak
-
 " switch cursor to line when in insert mode, and block when not
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
@@ -109,7 +106,7 @@ set ignorecase              " case insensitive searching
 set smartcase               " case-sensitive if expresson contains a capital letter
 set hlsearch                " highlight search results
 set incsearch               " set incremental search, like modern browsers
-set lazyredraw            " don't redraw while executing macros
+set lazyredraw              " Fix slow scrolling
 
 set magic                   " Set magic on, for regex
 
@@ -239,3 +236,7 @@ nmap <silent><leader>gb :Gblame<cr>
 " MRU plugin
 nmap <leader>; :MRU<CR>
 " }}}
+" set colorscheme
+colorscheme nousefreak " Used as base theme with module as overlay for better code syntax"
+colorscheme molokai
+
