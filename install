@@ -45,10 +45,10 @@ for source in glob(dotfiles+'/*/*.configsymlink'):
 
     os.symlink(source, dest)
 
-print 'Installing Plug'
-call('curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+print 'Installing vim plugin manager'
+call('curl -fLso '+homedir+'/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim', shell=True)
 
-print 'Installing Plugins'
+print 'Installing vim plugins'
 call('vim +PlugInstall 1 +qall', shell=True)
 
