@@ -102,8 +102,8 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $workspace1 "1: Browser"
-set $workspace2 "2: Editor"
+set $workspace1 "1: "
+set $workspace2 "2: "
 set $workspace3 "3"
 set $workspace4 "4"
 set $workspace5 "5"
@@ -231,8 +231,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #d
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 bindsym XF86KbdBrightnessUp exec sudo /home/dries/.config/i3/mbp_backlight up
 bindsym XF86KbdBrightnessDown exec sudo /home/dries/.config/i3/mbp_backlight down
 
