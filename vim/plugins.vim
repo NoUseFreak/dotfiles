@@ -1,38 +1,33 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.vim/plugged')
 
 " Utilities
-Plugin 'scrooloose/nerdtree'           " File drawer
-Plugin 'Xuyuanp/nerdtree-git-plugin'   " File drawer git plugin
-Plugin 'tpope/vim-commentary'          " Comment stuff
-Plugin 'tpope/vim-fugitive'            " Git wrapper
-Plugin 'airblade/vim-gitgutter'        " Git gutter
-Plugin 'vim-airline/vim-airline'       " Fancy statusline
-Plugin 'vim-syntastic/syntastic'       " Syntax checker
-Plugin 'editorconfig/editorconfig-vim' " .editorconfig support
-Plugin 'ervandew/supertab'             " Perform insert TAB
-Plugin 'tpope/vim-sleuth'              " Detect indent styles
-Plugin 'sickill/vim-pasta'             " Context aware pasting
-Plugin 'jiangmiao/auto-pairs'          " Auto create braces
-Plugin 'AndrewRadev/splitjoin.vim'     " Split object into multilines. gS, gJ
-Plugin 'kien/ctrlp.vim'                " Fuzy search using ctrl+p
-Plugin 'vim-scripts/mru.vim'           " Most recent files
-Plugin 'tomasr/molokai'                " Nice theme
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'scrooloose/nerdtree'           " File drawer
+Plug 'Xuyuanp/nerdtree-git-plugin'   " File drawer git plugin
+Plug 'tpope/vim-commentary'          " Comment stuff
+Plug 'tpope/vim-fugitive'            " Git wrapper
+Plug 'airblade/vim-gitgutter'        " Git gutter
+Plug 'vim-airline/vim-airline'       " Fancy statusline
+Plug 'vim-syntastic/syntastic'       " Syntax checker
+Plug 'editorconfig/editorconfig-vim' " .editorconfig support
+Plug 'ervandew/supertab'             " Perform insert TAB
+Plug 'tpope/vim-sleuth'              " Detect indent styles
+Plug 'sickill/vim-pasta'             " Context aware pasting
+Plug 'jiangmiao/auto-pairs'          " Auto create braces
+Plug 'AndrewRadev/splitjoin.vim'     " Split object into multilines. gS, gJ
+Plug 'kien/ctrlp.vim'                " Fuzy search using ctrl+p
+Plug 'vim-scripts/mru.vim'           " Most recent files
+Plug 'tomasr/molokai'                " Nice theme
 
 " Language specific
-Plugin 'hashivim/vim-terraform'        " Terraform highlighting
-Plugin 'hashivim/vim-packer'           " Packer highlighting
-Plugin 'hashivim/vim-vagrant'          " Vagrant highlighting
-Plugin 'chase/vim-ansible-yaml'        " Ansible
-Plugin 'fatih/vim-go'                  " Golang
-Plugin 'alvan/vim-php-manual'          " Add php docs for shift+k"
+Plug 'hashivim/vim-terraform'        " Terraform highlighting
+Plug 'hashivim/vim-packer'           " Packer highlighting
+Plug 'hashivim/vim-vagrant'          " Vagrant highlighting
+Plug 'chase/vim-ansible-yaml'        " Ansible
+Plug 'fatih/vim-go'                  " Golang
+Plug 'alvan/vim-php-manual'          " Add php docs for shift+k"
+Plug 'm2mdas/phpcomplete-extended'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
+

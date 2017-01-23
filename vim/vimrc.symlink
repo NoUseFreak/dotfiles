@@ -224,7 +224,7 @@ nmap <C-h> :tabp<CR>
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore = ['\.pyc$', '.phpcomplete_extended']
 
 
 " Fugitive Shortcuts
@@ -235,6 +235,10 @@ nmap <silent><leader>gb :Gblame<cr>
 
 " MRU plugin
 nmap <leader>; :MRU<CR>
+
+let g:phpcomplete_index_composer_command='composer'
+
+
 " }}}
 " set colorscheme
 colorscheme nousefreak " Used as base theme with module as overlay for better code syntax"
