@@ -98,6 +98,4 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'  # Save and restore sessions using 
 
 bind s source-file ~/.dotfiles/tmux/layout1.conf
 
-# Open new things with same path
-set-option default-path "$PWD"
 
