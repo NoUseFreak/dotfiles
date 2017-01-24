@@ -192,7 +192,13 @@ nmap <leader>r :registers<CR>
 
 " Clipboard handling
 "vmap <C-c> :w !pbcopy<CR><CR>
-set clipboard=unnamedplus
+if system('uname -s') == "Darwin\n"
+  "OSX
+  set clipboard=unnamed 
+else
+  "Linux
+  set clipboard=unnamedplus
+endif
 
 " Use :W to write as root
 command W w !sudo tee % > /dev/null
@@ -224,7 +230,7 @@ nmap <C-h> :tabp<CR>
 let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
-let NERDTreeIgnore = ['\.pyc$', '.phpcomplete_extended']
+let NERDTreeIgnore = ['\.pyc$', '.phpcomplete_extended','.git$','.vagrant']
 
 
 " Fugitive Shortcuts

@@ -1,3 +1,4 @@
 vim/vim.symlink/plugged
 ssh/ssh.symlink/id_*
+ssh/ssh.symlink/*.pem
 ssh/ssh.symlink/known_hosts
