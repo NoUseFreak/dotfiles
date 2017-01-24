@@ -58,5 +58,5 @@ if [[ -a ~/.localrc ]]; then
 fi
 
 wd() {
-  . /home/dries/bin/wd/wd.sh
+  . ~/bin/wd/wd.sh
 }

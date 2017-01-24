@@ -52,3 +52,9 @@ call('curl -fLso '+homedir+'/.vim/autoload/plug.vim --create-dirs \
 print 'Installing vim plugins'
 call('vim +PlugInstall 1 +qall', shell=True)
 
+print 'Installing warp directory'
+if not isdir(homedir+'/bin'):
+    os.mkdir(homedir+'/bin')
+if not isdir(homedir+'/bin/wd'):
+    call('git clone https://github.com/mfaerevaag/wd.git '+homedir+'/bin/wd || true', shell=True)
+
