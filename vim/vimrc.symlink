@@ -191,14 +191,15 @@ nmap <leader>b :buffers<CR>:buffer<Space>
 nmap <leader>r :registers<CR>
 
 " Clipboard handling
-"vmap <C-c> :w !pbcopy<CR><CR>
-if system('uname -s') == "Darwin\n"
-  "OSX
-  set clipboard=unnamed 
-else
-  "Linux
-  set clipboard=unnamedplus
-endif
+vmap <C-c> :w !pbcopy<CR><CR>
+" yank to clipboard
+"if has("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
+
+  if has("unnamedplus") " X11 support
+    set clipboard+=unnamedplus
+  endif
+"endif
 
 " Use :W to write as root
 command W w !sudo tee % > /dev/null
