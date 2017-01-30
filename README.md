@@ -9,6 +9,7 @@ This is yet another version of my dotfiles. I keep these here to sync my machine
  - tmux
  - vim
  - zsh
+ - ssh
 
 ## Installation
 
@@ -16,5 +17,20 @@ This is yet another version of my dotfiles. I keep these here to sync my machine
 $ git clone -b ubuntu git@github.com:NoUseFreak/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./install
- ```
+```
+
+## Details
+
+Most of the information is in the code :-).
+
+## Personalize
+
+*zsh*
+
+To customize your zshrc, use `~/.localrc`.
+
+*ssh*
+
+Use `~/.ssh/keys/` to store your keys.
+Use `~/.ssh/config.d/` to store your custom configs.
 
