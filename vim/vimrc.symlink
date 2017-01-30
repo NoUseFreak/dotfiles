@@ -232,6 +232,7 @@ let NERDTreeShowHidden=1
 let NERDTreeDirArrowExpandable = '▷'
 let NERDTreeDirArrowCollapsible = '▼'
 let NERDTreeIgnore = ['\.pyc$', '.phpcomplete_extended','.git$','.vagrant']
+let NERDTreeMinimalUI = 1
 
 
 " Fugitive Shortcuts
