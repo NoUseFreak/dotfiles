@@ -1,4 +1,9 @@
+# vim
 vim/vim.symlink/plugged
+
+# ssh
 ssh/ssh.symlink/keys/*
 !ssh/ssh.symlink/keys/.gitkeep
+ssh/ssh.symlink/config.d
+!ssh/ssh.symlink/config.d/.gitkeep
 ssh/ssh.symlink/known_hosts

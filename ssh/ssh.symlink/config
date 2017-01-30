@@ -6,4 +6,3 @@ Host *
 	ControlMaster auto
 	ControlPersist 600
 
-
