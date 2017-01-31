@@ -3,6 +3,6 @@ AddKeysToAgent yes
 
 Host *
 	ForwardAgent yes
-	ControlMaster auto
-	ControlPersist 600
+
+Include ~/.ssh/config.d/*
 
