@@ -13,9 +13,9 @@ Plug 'vim-syntastic/syntastic'       " Syntax checker
 Plug 'editorconfig/editorconfig-vim' " .editorconfig support
 Plug 'ervandew/supertab'             " Perform insert TAB
 Plug 'tpope/vim-sleuth'              " Detect indent styles
+Plug 'tpope/vim-surround'            " Surround using cs"'
 Plug 'sickill/vim-pasta'             " Context aware pasting
 Plug 'jiangmiao/auto-pairs'          " Auto create braces
-Plug 'AndrewRadev/splitjoin.vim'     " Split object into multilines. gS, gJ
 Plug 'kien/ctrlp.vim'                " Fuzy search using ctrl+p
 Plug 'vim-scripts/mru.vim'           " Most recent files
 Plug 'tomasr/molokai'                " Nice theme
@@ -24,6 +24,7 @@ Plug 'tomasr/molokai'                " Nice theme
 Plug 'hashivim/vim-terraform'        " Terraform highlighting
 Plug 'hashivim/vim-packer'           " Packer highlighting
 Plug 'hashivim/vim-vagrant'          " Vagrant highlighting
+Plug 'tpope/vim-markdown'            " Markdown highlighting
 Plug 'chase/vim-ansible-yaml'        " Ansible
 Plug 'fatih/vim-go'                  " Golang
 Plug 'alvan/vim-php-manual'          " Add php docs for shift+k"
