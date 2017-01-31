@@ -27,6 +27,7 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 " switch cursor to line when in insert mode, and block when not
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+set shortmess=I
 
 if &term =~ '256color'
     " disable background color erase
@@ -202,7 +203,7 @@ vmap <C-c> :w !pbcopy<CR><CR>
 "endif
 
 " Use :W to write as root
-command W w !sudo tee % > /dev/null
+cnoremap w!! w !sudo tee > /dev/null %
 
 " Toggle spell checking
 map <leader>ss :setlocal spell!<CR>
@@ -243,12 +244,13 @@ nmap <silent><leader>gb :Gblame<cr>
 
 " MRU plugin
 nmap <leader>; :MRU<CR>
+nmap <leader>R :source ~/.vimrc<CR>
 
 let g:phpcomplete_index_composer_command='composer'
 
 
 " }}}
 " set colorscheme
-colorscheme nousefreak " Used as base theme with module as overlay for better code syntax"
+colorscheme nousefreak " Used as base theme with module as overlay for better code syntax
 colorscheme molokai
 
