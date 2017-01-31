@@ -19,6 +19,8 @@ $ cd ~/.dotfiles
 $ ./install
 ```
 
+To update it later run `~/.dotfiles/update`
+
 ## Details
 
 Most of the information is in the code :-).

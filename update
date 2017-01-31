@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+# Update code
+cd ~/.dotfiles; git pull
+
+# Install again :-)
+./install
+
+# Reload zshrc
+. ~/.zshrc
+
