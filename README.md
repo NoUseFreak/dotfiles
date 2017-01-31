@@ -36,3 +36,7 @@ To customize your zshrc, use `~/.localrc`.
 Use `~/.ssh/keys/` to store your keys.
 Use `~/.ssh/config.d/` to store your custom configs.
 
+*NOTE*
+
+It is highly recommended to place your personal changes in a seperate git repo and symlink the files to the locations.
+
