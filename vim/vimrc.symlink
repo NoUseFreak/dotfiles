@@ -217,6 +217,10 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 
+" NewLine helpers above and below
+nmap go o<ESC>k
+nmap gO O<ESC>j
+
 " }}}
 
 
