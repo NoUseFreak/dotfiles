@@ -12,6 +12,7 @@ alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 
 # Shorter-cuts
 alias st="git st"
+alias up="git fetch; git rebase"
 
 # Xdebug
 alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" php -d xdebug.remote_enable=true "
