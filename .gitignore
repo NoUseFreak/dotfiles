@@ -8,3 +8,8 @@ ssh/ssh.symlink/keys/*
 ssh/ssh.symlink/config.d
 !ssh/ssh.symlink/config.d/.gitkeep
 ssh/ssh.symlink/known_hosts
+
+# fonts
+fonts/fonts.symlink/*
+!fonts/fonts.symlink/.gitkeep
+
