@@ -124,8 +124,8 @@ set t_vb=
 set tm=500
 
 if has('mouse')
-	" set mouse=a
-	" set ttymouse=xterm2
+    " set mouse=a
+    " set ttymouse=xterm2
 endif
 
 let g:netrw_banner=0         " Disable banner
@@ -215,7 +215,7 @@ map <leader>pp :setlocal paste!<CR>
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
+map <leader>tm :tabmove
 
 " NewLine helpers above and below
 nmap go o<ESC>k
@@ -252,7 +252,24 @@ nmap <leader>R :source ~/.vimrc<CR>
 
 let g:phpcomplete_index_composer_command='composer'
 
+" Make airline sexy
+let g:airline_powerline_fonts = 1
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.maxlinenr = ''
 
+let g:airline_mode_map = {
+    \ '__' : '-',
+    \ 'n'  : 'N',
+    \ 'i'  : 'I',
+    \ 'R'  : 'R',
+    \ 'c'  : 'C',
+    \ 'v'  : 'V',
+    \ 'V'  : 'V',
+    \ '' : 'V',
+    \ 's'  : 'S',
+    \ 'S'  : 'S',
+    \ '' : 'S',
+    \ }
 " }}}
 " set colorscheme
 colorscheme nousefreak " Used as base theme with module as overlay for better code syntax
