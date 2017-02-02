@@ -248,7 +248,6 @@ nmap <silent><leader>gb :Gblame<cr>
 
 " MRU plugin
 nmap <leader>; :MRU<CR>
-nmap <leader>R :source ~/.vimrc<CR>
 
 let g:phpcomplete_index_composer_command='composer'
 
