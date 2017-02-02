@@ -49,7 +49,7 @@ highlight NonText ctermbg=none ctermfg=8
 highlight Comment cterm=italic
 highlight htmlArg cterm=italic
 
-set number                  " show line numbers
+set relativenumber                  " show line numbers
 "set relativenumber          " show relative line numbers
 
 set wrap                    " turn on line wrapping
