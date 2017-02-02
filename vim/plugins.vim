@@ -7,6 +7,7 @@ Plug 'scrooloose/nerdtree'           " File drawer
 Plug 'Xuyuanp/nerdtree-git-plugin'   " File drawer git plugin
 Plug 'tpope/vim-commentary'          " Comment stuff
 Plug 'tpope/vim-fugitive'            " Git wrapper
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' } " Add autocompletion
 Plug 'airblade/vim-gitgutter'        " Git gutter
 Plug 'vim-airline/vim-airline'       " Fancy statusline
 Plug 'vim-syntastic/syntastic'       " Syntax checker
@@ -29,6 +30,7 @@ Plug 'chase/vim-ansible-yaml'        " Ansible
 Plug 'fatih/vim-go'                  " Golang
 Plug 'alvan/vim-php-manual'          " Add php docs for shift+k"
 Plug 'm2mdas/phpcomplete-extended'
+
 
 call plug#end()
 
