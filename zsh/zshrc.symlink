@@ -23,6 +23,7 @@ plugins+=(gulp bower npm)
 plugins+=(docker docker-compose)
 plugins+=(systemadmin)
 plugins+=(symfony2 composer)
+plugins+=(kubectl)
 
 # source all .zsh files inside of the zsh/ directory
 for config ($DOTFILES/zsh/*.zsh) source $config
