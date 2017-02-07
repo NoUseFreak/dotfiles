@@ -4,6 +4,7 @@ AddKeysToAgent yes
 
 Host *
 	ForwardAgent yes
+	IdentityFile ~/.ssh/keys/id_rsa
 
 Include ~/.ssh/config.d/*
 
