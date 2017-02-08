@@ -158,7 +158,10 @@ imap jj <ESC>
 map <leader>' :find<Space>
 
 " wipout buffer
-nmap <silent> <leader>b :bw<cr>
+nmap <silent> <leader>B :bw<cr>
+
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 
 " shortcut to save
 nmap <leader>\ :w<cr>
