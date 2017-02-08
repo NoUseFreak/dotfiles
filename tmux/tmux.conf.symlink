@@ -1,3 +1,5 @@
+# vi: ft=tmux
+
 set -g history-limit 20000
 set-option -g default-command "~/.dotfiles/tmux/safe-reattach-to-user-namespace -l $SHELL"
 
