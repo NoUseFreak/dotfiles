@@ -74,8 +74,10 @@ bind -r K resize-pane -U 10
 bind -r L resize-pane -R 10
 
 # enable mouse support for switching panes/windows
-setw -g mouse on
-# set-option -g -q mouse on
+setw -g mouse off
+
+# Toggle mouse on with ^B m
+bind m set -g mouse \; display "Mouse toggled!"
 
 # Note: If you use iTerm, enable 'Applications in terminal may access clipboard' under General
 # set vi mode for copy mode
