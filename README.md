@@ -25,6 +25,7 @@ To update it later run `~/.dotfiles/update`
 
  - vim
  - cmake
+ - ssh-client>=7.3
 
 ## Details
 
