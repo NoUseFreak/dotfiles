@@ -176,10 +176,10 @@ nmap <leader>l :set list!<cr>
 nmap <leader>. <c-^>
 
 " Window movement
-map <silent> <C-h> :call functions#WinMove('h')<cr>
-map <silent> <C-j> :call functions#WinMove('j')<cr>
-map <silent> <C-k> :call functions#WinMove('k')<cr>
-map <silent> <C-l> :call functions#WinMove('l')<cr>
+noremap <silent> <C-h> :call functions#WinMove('h')<cr>
+noremap <silent> <C-j> :call functions#WinMove('j')<cr>
+noremap <silent> <C-k> :call functions#WinMove('k')<cr>
+noremap <silent> <C-l> :call functions#WinMove('l')<cr>
 
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
@@ -270,7 +270,12 @@ let g:airline_mode_map = {
     \ 'S'  : 'S',
     \ '' : 'S',
     \ }
+
+" Fix window movement in php files
+let g:php_manual_online_search_shortcut = ''
+
 " }}}
+
 " set colorscheme
 colorscheme nousefreak " Used as base theme with module as overlay for better code syntax
 colorscheme molokai
