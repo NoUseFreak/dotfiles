@@ -102,8 +102,9 @@ set-option -g allow-rename off
 
 set -g @plugin 'tmux-plugins/tmux-resurrect'  # Save and restore sessions using prefix-ctrl-s prefix ctrl-r
 
-bind C-l source-file ~/.dotfiles/tmux/layout1.conf
-bind C-j source-file ~/.dotfiles/tmux/layout2.conf
+# Bind layouts to shift-[1-9]
+bind ! source-file ~/.dotfiles/tmux/layout1.conf
+bind @ source-file ~/.dotfiles/tmux/layout2.conf
 
 # Smart pane switching with awareness of Vim splits.
 # See: https://github.com/christoomey/vim-tmux-navigator
