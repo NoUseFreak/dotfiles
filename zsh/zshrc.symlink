@@ -4,7 +4,7 @@ export DOTFILES=$HOME/.dotfiles
 source $ZSH/oh-my-zsh.sh
 
 export GOPATH=~/Projects
-export PATH=$PATH:$GOPATH/bin
+export PATH=$HOME/.bin:$PATH:$GOPATH/bin
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
