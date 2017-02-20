@@ -76,7 +76,7 @@ bind -r K resize-pane -U 10
 bind -r L resize-pane -R 10
 
 # enable mouse support for switching panes/windows
-setw -g mouse off
+setw -g mouse on
 
 # Toggle mouse on with ^B m
 bind m set -g mouse \; display "Mouse toggled!"
