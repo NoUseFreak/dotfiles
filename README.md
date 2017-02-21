@@ -26,7 +26,7 @@ NoUseFreak's dotfiles
 # Installation
 
 ```
-$ git clone git@github.com:NoUseFreak/dotfiles.git ~/.dotfiles
+$ git clone -b work https://github.com/NoUseFreak/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./install.sh
 ```
