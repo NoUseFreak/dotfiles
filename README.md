@@ -14,7 +14,7 @@ This is yet another version of my dotfiles. I keep these here to sync my machine
 ## Installation
 
 ```
-$ git clone -b ubuntu git@github.com:NoUseFreak/dotfiles.git ~/.dotfiles
+$ git clone -b master https://github.com/NoUseFreak/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./install
 ```
