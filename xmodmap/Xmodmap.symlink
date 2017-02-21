@@ -1,0 +1,20 @@
+! vim: ft=xmodmap
+
+clear Lock
+!keycode 66 = Escape NoSymbol Escape
+keycode 66 = Control_L NoSymbol Control_L
+
+
+clear mod4
+keycode 105 =
+
+keycode 133 = Control_L NoSymbol Control_L
+keycode 134 = Control_R NoSymbol Control_R
+add control = Control_R
+add control = Control_L
+keycode 108 = Alt_L NoSymbol Alt_L
+
+pointer = 1 2 3 5 4 7 6 8 9 10 11 12
+
+keycode 12=3 numbersign
+
