@@ -2,6 +2,15 @@
 
 This is yet another version of my dotfiles. I keep these here to sync my machines. 
 
+## Usage
+
+As most dotfiles repos, you will in almost every case not be wanting to use this as is. 
+If you like the setup, create a fork and start customizing it to your own needs and likings. 
+This allows for other people to find your version and learn from your changes.
+
+Although everyone's dotfiles will be different, I do encourage Pull Requests and feedback to improve
+the project.
+
 ## What is included
 
  - git
@@ -10,6 +19,7 @@ This is yet another version of my dotfiles. I keep these here to sync my machine
  - vim
  - zsh
  - ssh
+ - xmodmap
 
 ## Installation
 
