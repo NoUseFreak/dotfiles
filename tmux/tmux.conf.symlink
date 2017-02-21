@@ -66,9 +66,6 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
-bind -r C-h select-window -t :-
-bind -r C-l select-window -t :+
-
 # Resize pane shortcuts
 bind -r H resize-pane -L 10
 bind -r J resize-pane -D 10
