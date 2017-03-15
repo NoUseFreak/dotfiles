@@ -19,3 +19,7 @@ alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" php -d xdebug.remote_enable=true
 
 # Html2Text
 alias html2text="html2text -width $(tput cols)"
+
+# Recursive grep in folder
+alias rg="grep -rni settings/qa -e "
+
