@@ -31,6 +31,7 @@ Plug 'chase/vim-ansible-yaml'        " Ansible
 Plug 'fatih/vim-go'                  " Golang
 Plug 'alvan/vim-php-manual'          " Add php docs for shift+k"
 
+Plug 'edkolev/tmuxline.vim'
 
 call plug#end()
 
