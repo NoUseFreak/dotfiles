@@ -158,7 +158,8 @@ imap jj <ESC>
 map <leader>' :find<Space>
 
 " wipout buffer
-nmap <silent> <leader>B :bw<cr>
+nmap <silent> <leader>B :bw<CR>
+nnoremap <silent> <leader>R :bufdo bd<CR>
 
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
@@ -170,7 +171,7 @@ nmap <leader>\ :w<cr>
 set pastetoggle=<leader>v
 
 " toggle whitespaces
-nmap <leader>l :set list!<cr>
+nmap <leader>l :set list!<CR>
 
 " switch between current and last buffer
 nmap <leader>. <c-^>
@@ -274,9 +275,15 @@ let g:airline_mode_map = {
 " Fix window movement in php files
 let g:php_manual_online_search_shortcut = ''
 
+" Notes
+let g:notes_directories = ['~/Documents/Notes', '~/Dropbox/Shared Notes']
+let g:notes_suffix = '.md'
+map <leader>n :Note<CR>
+
 " }}}
 
 " set colorscheme
 colorscheme nousefreak " Used as base theme with module as overlay for better code syntax
 colorscheme molokai
+hi CursorLine gui=underline cterm=underline
 
