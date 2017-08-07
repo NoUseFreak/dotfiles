@@ -21,6 +21,8 @@ Plug 'kien/ctrlp.vim'                " Fuzy search using ctrl+p
 Plug 'vim-scripts/mru.vim'           " Most recent files
 Plug 'tomasr/molokai'                " Nice theme
 Plug 'christoomey/vim-tmux-navigator' " Navigate between panes usin C-hjkl
+Plug 'xolox/vim-misc'                " Take notes using :Notes
+Plug 'xolox/vim-notes'               " Take notes using :Notes
 
 " Language specific
 Plug 'hashivim/vim-terraform'        " Terraform highlighting
