@@ -1,9 +1,9 @@
 # vi: ft=sshconfig
 
-AddKeysToAgent yes
-
 Host *
-	ForwardAgent yes
-
-Include ~/.ssh/config.d/*
+    Include ~/.ssh/config.d/*
+    ForwardAgent yes
+    ControlMaster   auto
+    ControlPath     ~/.ssh/mux-%r@%h:%p
+    ControlPersist  15m
 
