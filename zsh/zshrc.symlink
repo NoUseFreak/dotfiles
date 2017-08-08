@@ -65,6 +65,9 @@ wd() {
   . ~/bin/wd/wd.sh
 }
 
+# Include autocomplete functions
+source $HOME/.dotfiles/zsh/autocomplete/*.zsh
+
 # Extra's
 
 if [[ -a ~/.localrc ]]; then
