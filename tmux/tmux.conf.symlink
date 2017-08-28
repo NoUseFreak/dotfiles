@@ -113,3 +113,5 @@ bind-key -n C-k if-shell "$is_vim" "send-keys C-k"  "select-pane -U"
 bind-key -n C-l if-shell "$is_vim" "send-keys C-l"  "select-pane -R"
 bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
+set -g automatic-rename-format '#(echo "#{pane_current_path}" | rev | cut -d'/' -f-3 | rev)'
+set -g status-interval 5
