@@ -176,10 +176,10 @@ nmap <leader>l :set list!<cr>
 nmap <leader>. <c-^>
 
 " Window movement
-noremap <silent> <C-h> :call functions#WinMove('h')<cr>
-noremap <silent> <C-j> :call functions#WinMove('j')<cr>
-noremap <silent> <C-k> :call functions#WinMove('k')<cr>
-noremap <silent> <C-l> :call functions#WinMove('l')<cr>
+noremap <silent> <C-h> <C-w>h
+noremap <silent> <C-j> <C-w>j
+noremap <silent> <C-k> <C-w>k
+noremap <silent> <C-l> <C-w>l
 
 " scroll the viewport faster
 nnoremap <C-e> 3<C-e>
