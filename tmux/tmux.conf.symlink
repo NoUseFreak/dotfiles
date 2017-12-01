@@ -52,7 +52,9 @@ bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
 
 # quickly open a new window
 bind N new-window
-bind q killp
+
+# quickly kill a window
+bind Q killp
 
 # split window and fix path for tmux 1.9
 bind | split-window -h -c "#{pane_current_path}"
