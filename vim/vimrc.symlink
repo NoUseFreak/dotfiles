@@ -141,14 +141,14 @@ let g:netrw_banner=0         " Disable banner
 let mapleader = '\'
 
 " force hjkl
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+"inoremap  <Up>     <NOP>
+"inoremap  <Down>   <NOP>
+"inoremap  <Left>   <NOP>
+"inoremap  <Right>  <NOP>
+"noremap   <Up>     <NOP>
+"noremap   <Down>   <NOP>
+"noremap   <Left>   <NOP>
+"noremap   <Right>  <NOP>
 
 
 " Enable fast escape
@@ -221,6 +221,9 @@ map <leader>tm :tabmove
 " NewLine helpers above and below
 nmap go o<ESC>k
 nmap gO O<ESC>j
+
+" Toggle wrapping
+map <leader>w :set wrap!<cr>
 
 " }}}
 
