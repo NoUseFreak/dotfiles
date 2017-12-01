@@ -30,10 +30,13 @@
 	ci = commit
 	br = branch -v
 	diff = diff --ignore-space-at-eol -b -w --ignore-blank-lines
-	
+
+	##
+	# Fun
+	##
+
 	# show what I did today
     day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
-
 
 	# order files by number of commits, ascending
 	# Written by Corey Haines
@@ -42,12 +45,47 @@
 	#   $ git churn --since='1 month ago'
 	churn = "!f() { git log --all -M -C --name-only --format='format:' \"$@\" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print \"count\tfile\"} {print $1 \"\t\" $2}' | sort -g; }; f"
 
+
+	##
+	# Branches
+	##
+
+	# Get the current branch name (not so useful in itself, but used in other aliases)
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+	# Push the current branch to the remote "origin", and set it to track
+	# the upstream branch
+	publish = "!git push -u origin $(git branch-name)"
+
+	# Delete the remote version of the current branch
+	unpublish = "!git push origin :$(git branch-name)"
+
+	# Delete a branch and recreate it from master — useful if you have, say,
+	# a development branch and a master branch and they could conceivably go
+	# out of sync
+	recreate = "!f() { [[ -n $@  ]] && git checkout \"$@\" && git unpublish && git checkout master && git branch -D \"$@\" && git checkout -b \"$@\" && git publish;  }; f"
+
 	# rebase the current branch with changes from upstream remote
 	update = !git fetch upstream && git rebase upstream/`git rev-parse --abbrev-ref HEAD`
+
+	# Delete any branches that have been merged into master
+	# See also: https://gist.github.com/robmiller/5133264
+	delete-merged-branches = "!git co master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 	# tag aliases
 	# show the last tag
 	lt = describe --tags --abbrev=0
+
+	##
+	# Files
+	##
+
+	# Checkout our version of a file and add it
+	ours = "!f() { git checkout --ours $@ && git add $@;  }; f"
+
+	# Checkout their version of a file and add it
+	theirs = "!f() { git checkout --theirs $@ && git add $@;  }; f"
+
 
 [credential]
 	helper = cache
