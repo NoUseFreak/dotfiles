@@ -80,6 +80,12 @@
 	# Files
 	##
 
+	# Unstage any files that have been added to the staging area
+	unstage = reset HEAD
+
+	# Show changes that have been staged
+	diffc = diff --cached
+
 	# Checkout our version of a file and add it
 	ours = "!f() { git checkout --ours $@ && git add $@;  }; f"
 
