@@ -137,7 +137,7 @@ bindsym $mod+Shift+8 move container to workspace $workspace8
 bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
-bindsym $mod+Shift+x exec i3lock --color "$bg-color"  -i Pictures/wallpapers/brige-lights.png
+bindsym $mod+Shift+x exec i3lock --color "$bg-color"  -i ~/Pictures/wallpapers/brige-lights.png
 bindsym $mod+Shift+Left workspace prev
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Right workspace next
@@ -161,7 +161,8 @@ exec gnome-terminal --hide-menubar --role "MyEditor"
 #exec slack
 exec franz
 exec compton -f
-exec_always feh --bg-scale ~/Pictures/wallpapers/brige-lights.jpg
+exec_always feh --bg-scale ~/Pictures/wallpapers/wallpaper.jpg
+
 exec --no-startup-id nm-applet
 
 
