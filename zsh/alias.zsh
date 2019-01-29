@@ -21,5 +21,6 @@ alias xdebug="XDEBUG_CONFIG=\"idekey=PHPSTORM\" php -d xdebug.remote_enable=true
 alias html2text="html2text -width $(tput cols)"
 
 # Recursive grep in folder
-alias rg="grep -rni . -e "
+alias rg="grep --exclude-dir=.git -rni . -e "
+alias rgi="grep --exclude-dir=vendor --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.terraform -rni . -e "
 
