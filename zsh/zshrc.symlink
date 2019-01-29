@@ -5,6 +5,8 @@ source $ZSH/oh-my-zsh.sh
 
 export GOPATH=~/Projects
 export PATH=$HOME/.bin:$PATH:$GOPATH/bin
+export PATH="$HOME/.jenv/bin:$PATH"
+export PATH="$HOME/Library/Python/2.7/bin/:$PATH"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -64,6 +66,9 @@ setopt +o nomatch
 wd() {
   . ~/bin/wd/wd.sh
 }
+fpath=(~/bin/wd $fpath)
+#rm -f ~/.zcompdump
+compinit
 
 # Extra's
 
@@ -71,5 +76,18 @@ if [[ -a ~/.localrc ]]; then
 	source ~/.localrc
 fi
 
-# Include autocomplete functions
-source $HOME/.dotfiles/zsh/autocomplete/*.zsh
+. ~/.commonrc
+eval "$(jenv init -)"
+
+# added by travis gem
+[ -f /Users/dries/.travis/travis.sh ] && source /Users/dries/.travis/travis.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/dries/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/dries/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/dries/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/dries/google-cloud-sdk/completion.zsh.inc'; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/dries/.sdkman"
+[[ -s "/Users/dries/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/dries/.sdkman/bin/sdkman-init.sh"
