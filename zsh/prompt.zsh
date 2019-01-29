@@ -21,10 +21,6 @@ YS_VCS_PROMPT_SUFFIX="%{$reset_color%}"
 YS_VCS_PROMPT_DIRTY=" %{$fg[red]%}x"
 YS_VCS_PROMPT_CLEAN=" %{$fg[green]%}o"
 
-function prompt_kubecontext() {
-    echo "${YS_VCS_PROMPT_PREFIX1}%{$fg[red]%}k8s-`kubectl config current-context`/`kubectl config get-contexts --no-headers | grep '*' | awk '{print $5}'`${YS_VCS_PROMPT_SUFFIX}"
-}
-local kube_info='$(prompt_kubecontext)'
 
 # Colors
 if tput setaf 1 &> /dev/null; then
@@ -56,6 +52,11 @@ else
     white="\e[1;37m";
     yellow="\e[1;33m";
 fi;
+
+function prompt_kubecontext() {
+    echo " on ${orange}k8s-`kubectl config current-context`/`kubectl config get-contexts --no-headers | grep '*' | awk '{print $5}'`${YS_VCS_PROMPT_SUFFIX}"
+}
+local kube_info='$(prompt_kubecontext)'
 
 # Git info.
 local git_info='$(git_prompt_info)'
