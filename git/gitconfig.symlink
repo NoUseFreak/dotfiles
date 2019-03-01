@@ -1,6 +1,7 @@
 [user]
 	name = Dries De Peuter
 	email = dries@nousefreak.be
+	signingkey = F471B0FCF2D1F869
 
 [core]
 	excludesfile = ~/.gitignore_global
@@ -94,4 +95,20 @@
 
 
 [credential]
-	helper = cache
+	helper = osxkeychain
+
+[merge]
+    tool = "vscode"
+
+[mergetool "vscode"]
+    cmd = "code --wait $MERGED"
+
+[diff]
+    tool = "vscode"
+
+[difftool]
+    prompt = false
+	
+[difftool "vscode"]
+    cmd = "code --wait --diff $LOCAL $REMOTE"
+    trustExitCode = false
