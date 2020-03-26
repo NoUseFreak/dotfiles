@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+
+import os, sys
+import boto3
+
+profile = os.getenv('AWS_PROFILE')
+if not profile:
+    print("An AWS_PROFILE is required")
+    sys.exit(1)
+
+client = boto3.client('sts')
+account = client.get_caller_identity()
+
+region = client.meta.region_name
+accountId = account.get('Account')
+registry = '%s.dkr.ecr.%s.amazonaws.com' % (accountId, region)
+
+print("Logging to in %s (%s)" % (registry, profile))
+
+os.system('AWS_PROFILE=%s aws ecr get-login-password | docker login --username AWS --password-stdin %s' % (profile, registry))
