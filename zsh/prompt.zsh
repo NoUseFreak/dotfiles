@@ -75,6 +75,13 @@ ys_hg_prompt_info() {
     fi
 }
 
+local kubectl_info='$(ys_kubectl_prompt_info)'
+ys_kubectl_prompt_info() {
+    echo -n "${YS_VCS_PROMPT_PREFIX1}k8s${YS_VCS_PROMPT_PREFIX2}"
+    echo -n "$(kubectl config current-context)"
+    echo -n "$YS_VCS_PROMPT_SUFFIX"
+}
+
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $
 PROMPT="
 %{$terminfo[bold]$fg[red]%}#%{$reset_color%} \
@@ -82,7 +89,8 @@ PROMPT="
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
-${git_info}
+${git_info}\
+${kubectl_info}
 %{$terminfo[bold]$fg[red]%}%(?.%{$fg[green]%}.%{$fg[red]%})%B$ %{$reset_color%}"
 
 if [[ "$USER" == "root" ]]; then
@@ -92,6 +100,7 @@ PROMPT="
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${hg_info}\
-${git_info}
+${git_info}\
+${kubectl_info}
 %{$terminfo[bold]$fg[red]%}%(?.%{$fg[green]%}.%{$fg[red]%})%B$ %{$reset_color%}"
 fi
